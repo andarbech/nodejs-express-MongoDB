@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 // require('dotenv').config();
+//Json format
+app.use(express.json());
 
 
 //Import Routes
@@ -16,7 +18,7 @@ app.get('/', (req, res) => {
 //conectDB
 // const key = process.env.DB_CONNECTION;
 mongoose.connect(
-    'mongodb://localhost:27017/workshop-db', {
+    'mongodb://localhost:27017/test', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     },
